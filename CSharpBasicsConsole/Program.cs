@@ -12,37 +12,37 @@ namespace CSharpBasicsConsole
              * Least favorite school subject: Reading
              */
 
-            string name = "";
-            while (String.IsNullOrWhiteSpace(name))
+            UserInput taco = new UserInput();
+
+            
+            while (String.IsNullOrWhiteSpace(taco.Name))
             {
                 Console.Clear();
                 Console.Write("Enter your name: ");
-                name = Console.ReadLine();
+                taco.Name = Console.ReadLine();
             }
 
-            string favDay = "";
-            while (String.IsNullOrWhiteSpace(favDay))
+            
+            while (String.IsNullOrWhiteSpace(taco.FavoriteDayOfWeek))
             {
                 Console.Clear();
                 Console.Write("What is your favorite day of the week? ");
-                favDay = Console.ReadLine();
+                taco.FavoriteDayOfWeek = Console.ReadLine();
             }
 
-            string badSubject = "";
-            while (String.IsNullOrWhiteSpace(badSubject))
+            
+            while (String.IsNullOrWhiteSpace(taco.LeastFavoriteSubject))
             {
                 Console.Clear();
                 Console.Write("What is your least favorite school subject? ");
-                badSubject = Console.ReadLine();
+                taco.LeastFavoriteSubject = Console.ReadLine();
             }
 
             Console.Clear();
-            string displayText = @$"Name: {name}
-Favorite day of the week: {favDay}
-Least favorite school subject: {badSubject}";
-            Console.WriteLine(displayText);
+            Console.WriteLine(taco);
 
             Console.ReadLine();
+
 
 
 
